@@ -100,3 +100,46 @@ Requires a valid JWT token in the `Authorization` header as a Bearer token or in
 ### Example Response
 
 - `message` (string): "Logged out successfully"
+
+---
+
+## `/captains/register` Endpoint
+
+### Description
+
+Registers a new captain by creating a captain account and vehicle profile with the provided information.
+
+### HTTP Method
+
+`POST`
+
+### Request Body
+
+The request body should be in JSON format and include the following fields:
+
+- `fullname` (object):
+  - `firstname` (string, required): Captain's first name (minimum 3 characters).
+  - `lastname` (string, optional): Captain's last name (minimum 3 characters).
+- `email` (string, required): Captain's email address (must be a valid email).
+- `password` (string, required): Captain's password (minimum 6 characters).
+- `vehicle` (object):
+  - `color` (string, required): Vehicle color (minimum 3 characters).
+  - `plate` (string, required): Vehicle plate number (minimum 3 characters).
+  - `capacity` (number, required): Vehicle carrying capacity (minimum 1).
+  - `vehicleType` (string, required): Must be 'car', 'motorcycle', or 'auto'.
+
+### Example Response
+
+- `captain` (object):
+  - `fullname` (object):
+    - `firstname` (string): Captain's first name.
+    - `lastname` (string): Captain's last name.
+  - `email` (string): Captain's email address.
+  - `vehicle` (object):
+    - `color` (string): Vehicle color.
+    - `plate` (string): Vehicle plate.
+    - `capacity` (number): Vehicle capacity.
+    - `vehicleType` (string): Type of vehicle.
+- `token` (String): JWT Token
+
+---
