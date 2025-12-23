@@ -24,9 +24,9 @@ The request body should be in JSON format and include the following fields:
 
 - `user` (object):
   - `fullname` (object):
-    - `firstname` (string): User's first name (minimum 3 characters).
-    - `lastname` (string): User's last name (minimum 3 characters).
-  - `email` (string): User's email address (must be a valid email).
+    - `firstname` (string): User's first name.
+    - `lastname` (string): User's last name.
+  - `email` (string): User's email address.
 - `token` (String): JWT Token
 
 ---
@@ -225,3 +225,194 @@ Requires a valid JWT token in the `Authorization` header as a Bearer token or in
 - `message` (string): "Logged out successfully"
 
 ---
+
+## `/maps/get-coordinates` Endpoint
+
+### Description
+
+Retrieves the latitude and longitude for a given address string.
+
+### HTTP Method
+
+`GET`
+
+### Request Query Parameters
+
+- `address` (string, required): The address to geocode (minimum 3 characters).
+
+### Example Response
+
+- `ltd` (number): Latitude.
+- `lng` (number): Longitude.
+
+---
+
+## `/maps/get-distance-time` Endpoint
+
+### Description
+
+Calculates the distance and estimated travel time between an origin and a destination.
+
+### HTTP Method
+
+`GET`
+
+### Request Query Parameters
+
+- `origin` (string, required): The starting location.
+- `destination` (string, required): The ending location.
+
+### Example Response
+
+- `distance` (object):
+    - `text` (string): e.g., "15 km"
+    - `value` (number): Distance in meters.
+- `duration` (object):
+    - `text` (string): e.g., "30 mins"
+    - `value` (number): Time in seconds.
+
+---
+
+## `/maps/get-suggestions` Endpoint
+
+### Description
+
+Provides autocomplete suggestions for a partial address input.
+
+### HTTP Method
+
+`GET`
+
+### Request Query Parameters
+
+- `input` (string, required): The partial address to search for (minimum 3 characters).
+
+### Example Response
+
+- `Array` of strings: List of suggested addresses.
+
+---
+
+## `/rides/create` Endpoint
+
+### Description
+
+Creates a new ride request from a user.
+
+### HTTP Method
+
+`POST`
+
+### Authentication
+
+Requires a valid User JWT token.
+
+### Request Body
+
+- `pickup` (string, required): The pickup address (minimum 3 characters).
+- `destination` (string, required): The destination address (minimum 3 characters).
+- `vehicleType` (string, required): The type of vehicle requested (`auto`, `car`, or `moto`).
+
+### Example Response
+
+- `ride` (object): The created ride details containing status, fare, and pickup/drop locations.
+
+---
+
+## `/rides/get-fare` Endpoint
+
+### Description
+
+Calculates the fare estimate for a ride between two points for all vehicle types.
+
+### HTTP Method
+
+`GET`
+
+### Authentication
+
+Requires a valid User JWT token.
+
+### Request Query Parameters
+
+- `pickup` (string, required): The pickup address (minimum 3 characters).
+- `destination` (string, required): The destination address (minimum 3 characters).
+
+### Example Response
+
+- `auto` (number): Fare estimate for Auto.
+- `car` (number): Fare estimate for Car.
+- `moto` (number): Fare estimate for Moto.
+
+---
+
+## `/rides/confirm` Endpoint
+
+### Description
+
+Allows a Captain to accept/confirm a ride request.
+
+### HTTP Method
+
+`POST`
+
+### Authentication
+
+Requires a valid Captain JWT token.
+
+### Request Body
+
+- `rideId` (string, required): The MongoDB ID of the ride to confirm.
+
+### Example Response
+
+- `ride` (object): Updated ride object with status set to "accepted" and captain details assigned.
+
+---
+
+## `/rides/start-ride` Endpoint
+
+### Description
+
+Starts the ride after the captain verifies the OTP provided by the user.
+
+### HTTP Method
+
+`GET`
+
+### Authentication
+
+Requires a valid Captain JWT token.
+
+### Request Query Parameters
+
+- `rideId` (string, required): The MongoDB ID of the ride.
+- `otp` (string, required): The 6-digit OTP provided by the user.
+
+### Example Response
+
+- `ride` (object): Updated ride object with status set to "ongoing".
+
+---
+
+## `/rides/end-ride` Endpoint
+
+### Description
+
+Completes the ride once the destination is reached.
+
+### HTTP Method
+
+`POST`
+
+### Authentication
+
+Requires a valid Captain JWT token.
+
+### Request Body
+
+- `rideId` (string, required): The MongoDB ID of the ride.
+
+### Example Response
+
+- `ride` (object): Updated ride object with status set to "completed".
