@@ -21,14 +21,14 @@ const UserProtectWrapper = ({children}) => {
             headers: { 'Authorization': `Bearer ${token}` }
         }).then((response) => {
             if (response.status === 200) {
-                setUser(response.data.user)
+                setUser(response.data)
                 setIsLoading(false)
             }
         }).catch(err => {
             localStorage.removeItem('token')
             navigate('/login')
         })
-    }, [token,navigate,setUser]) // Ensure axios is INSIDE these brackets
+    }, [token,navigate,setUser]) 
 
     if (isLoading) return <div>Loading...</div>
 
