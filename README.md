@@ -246,7 +246,7 @@ npm start
 #### Active Ride Experience
 | Searching for Driver | Driver Assigned | Ride in Progress |
 |:--------------------:|:---------------:|:----------------:|
-| ![Looking for Driver](screenshots/lookingfordriver.png) | ![Waiting for Driver](screenshots/Waitingfordriver.png) | ![Riding](screenshots/riding.png) |
+| ![Looking for Driver](screenshots/lookingfordriver.png) | ![Waiting for Driver](screenshots/waitingfordriver.png) | ![Riding](screenshots/riding.png) |
 
 ### Captain (Driver) Journey
 
