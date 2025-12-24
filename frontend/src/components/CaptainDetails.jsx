@@ -11,7 +11,7 @@ const CaptainDetails = () => {
                     <div className="flex items-center justify-between">
                             <div className="flex items-center justify-start gap-3">
                                 <img className="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1755519024827-fd05075a7200?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                                <h4 className="text-lg font-medium text-cap">{ captain.fullname.firstname + " " + captain.fullname.lastname  }</h4>
+                                <h4 className="text-lg font-medium text-cap capitalize">{ captain.fullname.firstname + " " + captain.fullname.lastname  }</h4>
                             </div>
                             <div>
                                 <h4 className="text-xl font-semibold">₹295.20</h4>
