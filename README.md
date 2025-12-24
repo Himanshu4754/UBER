@@ -28,7 +28,7 @@ A full-stack ride-hailing application built with React, Node.js, Express, MongoD
 
 ### Technical Features
 - ⚡ Real-time communication using Socket.io
-- 🗺️ Geoapify API integration for geocoding and routing
+- 🗺️ Google Maps integration for geocoding and routing
 - 🔒 Secure authentication with JWT tokens
 - 🗄️ MongoDB for data persistence
 - 🌐 RESTful API architecture
@@ -67,12 +67,14 @@ Before running this project, make sure you have:
 ## 🔧 Installation
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Himanshu4754/UBER.git
 cd UBER
 ```
 
 ### 2. Install dependencies
+
 ```bash
 # Install root dependencies
 npm install
@@ -89,6 +91,7 @@ npm install
 ### 3. Environment Variables
 
 Create a `.env` file in the `Backend` directory:
+
 ```env
 PORT=3000
 MONGODB_URI=your_mongodb_connection_string
@@ -99,6 +102,7 @@ GEOAPIFY_API_KEY=your_geoapify_api_key
 ### 4. Run the application
 
 #### Development Mode
+
 ```bash
 # Run backend (from Backend directory)
 cd Backend
@@ -110,6 +114,7 @@ npm run dev
 ```
 
 #### Production Mode
+
 ```bash
 # Build frontend
 npm run build-frontend
@@ -119,6 +124,7 @@ npm start
 ```
 
 ## 📁 Project Structure
+
 ```
 UBER/
 ├── Backend/
@@ -167,7 +173,7 @@ UBER/
 - `GET /start-ride` - Start ride with OTP (Captain)
 - `POST /end-ride` - Complete ride (Captain)
 
-📖 For detailed API documentation, see [API_DOCUMENTATION.md](./API_DOCUMENTATION.md)
+
 
 ## 🔐 Authentication
 
@@ -215,47 +221,6 @@ npm run install-backend && npm run install-frontend && npm run build-frontend
 npm start
 ```
 
-## 📸 Screenshots
-
-### User Flow
-<details>
-<summary>Click to view screenshots</summary>
-
-#### Landing Page
-![Landing Page](screenshots/landingpage.png)
-
-#### User Login & Signup
-![User Login](screenshots/user-login.png)
-![User Signup](screenshots/user-signup.png)
-
-#### Home & Ride Booking
-![Home Screen](screenshots/home.png)
-![Find a Trip](screenshots/findatrip.png)
-![Ride Confirmation](screenshots/confirmRide.png)
-
-#### Ride Tracking
-![Looking for Driver](screenshots/lookingfordriver.png)
-![Riding](screenshots/riding.png)
-
-</details>
-
-### Captain Flow
-<details>
-<summary>Click to view screenshots</summary>
-
-#### Captain Login & Signup
-![Captain Login](screenshots/captain-login.png)
-![Captain Signup](screenshots/captain-signup.png)
-
-#### Captain Dashboard
-![Captain Home](screenshots/captain-home.png)
-![New Ride Request](screenshots/captain-gettingrequest.png)
-![Confirm Ride](screenshots/captain-confirmride.png)
-![Riding](screenshots/captain-riding.png)
-![Finish Ride](screenshots/captain-finishride.png)
-
-</details>
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -284,6 +249,51 @@ This project is open source and available under the [MIT License](LICENSE).
 - Socket.io for real-time communication
 - MongoDB Atlas for database hosting
 - Render.com for deployment
+
+## 📸 Screenshots
+
+### User Flow
+<details>
+<summary>Click to view screenshots</summary>
+
+#### Landing Page
+![Landing Page](screenshots/landing.png)
+
+#### User Login & Signup
+![User Login](screenshots/user-login.png)
+![User Signup](screenshots/user-signup.png)
+
+#### Home & Ride Booking
+![Home Screen](screenshots/home.png)
+![Location Search](screenshots/location-search.png)
+![Vehicle Selection](screenshots/vehicle-selection.png)
+![Ride Confirmation](screenshots/ride-confirmation.png)
+
+#### Ride Tracking
+![Looking for Driver](screenshots/looking-driver.png)
+![Captain Assigned](screenshots/captain-assigned.png)
+![Ride Complete](screenshots/ride-complete.png)
+
+</details>
+
+### Captain Flow
+<details>
+<summary>Click to view screenshots</summary>
+
+#### Captain Login & Signup
+![Captain Login](screenshots/captain-login.png)
+![Captain Signup](screenshots/captain-signup.png)
+
+#### Captain Dashboard
+![Captain Home](screenshots/captain-home.png)
+![New Ride Request](screenshots/new-ride.png)
+![OTP Verification](screenshots/otp-verify.png)
+![Ongoing Ride](screenshots/ongoing-ride.png)
+![Complete Ride](screenshots/finish-ride.png)
+
+</details>
+
+> **Note**: To add screenshots to your repository, create a `screenshots` folder in the root directory and add images with the names referenced above.
 
 ## 📞 Support
 
