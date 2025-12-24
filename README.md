@@ -257,7 +257,7 @@ This project is open source and available under the [MIT License](LICENSE).
 <summary>Click to view screenshots</summary>
 
 #### Landing Page
-![Landing Page](screenshots/landing.png)
+![Landing Page](screenshots/landingpage.png)
 
 #### User Login & Signup
 ![User Login](screenshots/user-login.png)
@@ -265,14 +265,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 #### Home & Ride Booking
 ![Home Screen](screenshots/home.png)
-![Location Search](screenshots/location-search.png)
-![Vehicle Selection](screenshots/vehicle-selection.png)
-![Ride Confirmation](screenshots/ride-confirmation.png)
+![Location Search](screenshots/findatrip.png)
+![Vehicle Selection](screenshots/vehiclePanel.png)
+![Ride Confirmation](screenshots/confirmRide.png)
 
 #### Ride Tracking
-![Looking for Driver](screenshots/looking-driver.png)
-![Captain Assigned](screenshots/captain-assigned.png)
-![Ride Complete](screenshots/ride-complete.png)
+![Looking for Driver](screenshots/lookingfordriver.png)
+![Captain Assigned](screenshots/waitingfordriver.png)
+![Ride Complete](screenshots/riding.png)
 
 </details>
 
@@ -286,14 +286,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 #### Captain Dashboard
 ![Captain Home](screenshots/captain-home.png)
-![New Ride Request](screenshots/new-ride.png)
-![OTP Verification](screenshots/otp-verify.png)
-![Ongoing Ride](screenshots/ongoing-ride.png)
-![Complete Ride](screenshots/finish-ride.png)
+![New Ride Request](screenshots/captain-gettingrequest.png)
+![OTP Verification](screenshots/captain-confirmride.png)
+![Ongoing Ride](screenshots/captain-riding.png)
+![Complete Ride](screenshots/captain-finishride.png)
 
 </details>
-
-> **Note**: To add screenshots to your repository, create a `screenshots` folder in the root directory and add images with the names referenced above.
 
 ## 📞 Support
 
