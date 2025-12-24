@@ -144,6 +144,10 @@ UBER/
 │   │   ├── pages/       # Page components
 │   │   └── App.jsx      # Main App component
 │   └── index.html
+├── screenshots/         # Application screenshots
+│   ├── landingpage.png
+│   ├── user-*.png       # User flow screenshots
+│   └── captain-*.png    # Captain flow screenshots
 └── package.json
 ```
 
@@ -172,8 +176,6 @@ UBER/
 - `POST /confirm` - Accept a ride (Captain)
 - `GET /start-ride` - Start ride with OTP (Captain)
 - `POST /end-ride` - Complete ride (Captain)
-
-
 
 ## 🔐 Authentication
 
@@ -221,6 +223,47 @@ npm run install-backend && npm run install-frontend && npm run build-frontend
 npm start
 ```
 
+## 📸 Screenshots
+
+### Application Overview
+
+| Landing Page | User Dashboard |
+|:------------:|:--------------:|
+| ![Landing Page](screenshots/landingpage.png) | ![Home Screen](screenshots/home.png) |
+
+### User Journey
+
+#### Authentication
+| User Login | User Signup |
+|:----------:|:-----------:|
+| ![User Login](screenshots/user-login.png) | ![User Signup](screenshots/user-signup.png) |
+
+#### Ride Booking Process
+| Location Search | Vehicle Selection | Ride Confirmation |
+|:---------------:|:-----------------:|:-----------------:|
+| ![Location Search](screenshots/findatrip.png) | ![Vehicle Selection](screenshots/vehiclePanel.png) | ![Confirm Ride](screenshots/confirmRide.png) |
+
+#### Active Ride Experience
+| Searching for Driver | Driver Assigned | Ride in Progress |
+|:--------------------:|:---------------:|:----------------:|
+| ![Looking for Driver](screenshots/lookingfordriver.png) | ![Waiting for Driver](screenshots/Waitingfordriver.png) | ![Riding](screenshots/riding.png) |
+
+### Captain (Driver) Journey
+
+#### Captain Authentication
+| Captain Login | Captain Signup |
+|:-------------:|:--------------:|
+| ![Captain Login](screenshots/captain-login.png) | ![Captain Signup](screenshots/captain-signup.png) |
+
+#### Captain Operations
+| Dashboard | New Request | OTP Verification |
+|:---------:|:-----------:|:----------------:|
+| ![Captain Home](screenshots/captain-home.png) | ![Getting Request](screenshots/captain-gettingrequest.png) | ![Confirm Ride](screenshots/captain-confirmride.png) |
+
+| Ongoing Ride | Complete Ride |
+|:------------:|:-------------:|
+| ![Captain Riding](screenshots/captain-riding.png) | ![Finish Ride](screenshots/captain-finishride.png) |
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -230,10 +273,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
@@ -249,49 +288,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - Socket.io for real-time communication
 - MongoDB Atlas for database hosting
 - Render.com for deployment
-
-## 📸 Screenshots
-
-### User Flow
-<details>
-<summary>Click to view screenshots</summary>
-
-#### Landing Page
-![Landing Page](screenshots/landingpage.png)
-
-#### User Login & Signup
-![User Login](screenshots/user-login.png)
-![User Signup](screenshots/user-signup.png)
-
-#### Home & Ride Booking
-![Home Screen](screenshots/home.png)
-![Location Search](screenshots/findatrip.png)
-![Vehicle Selection](screenshots/vehiclePanel.png)
-![Ride Confirmation](screenshots/confirmRide.png)
-
-#### Ride Tracking
-![Looking for Driver](screenshots/lookingfordriver.png)
-![Captain Assigned](screenshots/waitingfordriver.png)
-![Ride Complete](screenshots/riding.png)
-
-</details>
-
-### Captain Flow
-<details>
-<summary>Click to view screenshots</summary>
-
-#### Captain Login & Signup
-![Captain Login](screenshots/captain-login.png)
-![Captain Signup](screenshots/captain-signup.png)
-
-#### Captain Dashboard
-![Captain Home](screenshots/captain-home.png)
-![New Ride Request](screenshots/captain-gettingrequest.png)
-![OTP Verification](screenshots/captain-confirmride.png)
-![Ongoing Ride](screenshots/captain-riding.png)
-![Complete Ride](screenshots/captain-finishride.png)
-
-</details>
 
 ## 📞 Support
 
